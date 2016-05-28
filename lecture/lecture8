@@ -1,0 +1,61 @@
+esc-x gdb-many-windows --> debugging
+for detailing -> searching online emacs gud mode
+
+char *mystrcpy(char *sec, char *dst){
+     int i = 0;
+     while(*(sec + i) != '\o){
+     	*(dst+i) = *(sec+i);
+	i++;
+	}
+     *(dsst+i) = '\o';
+     return dst;
+}
+
+
+void main(void){
+     char buf1 []= "hello";
+     char buf2 [80];
+     char *p;
+     p = mystrcpy(buf1, buf2);
+}
+
+
+char *mystrncpy(char *src, char *dst, int size){
+     int i = 0;
+     while(*(src+i) != '\0' && i < size){
+     	*(dst+i)=*(src+i);
+	i++;
+     }
+
+     for( ; i<size; i++){
+     *(dst+i)='\o';
+     }
+     return dst;
+}
+
+char * mystrchr(char *str, char c){
+    for( ; *str != '\o'; str++){
+    	 if(*str == c){
+	   return (str);
+	 }
+    }
+    return (0);
+}
+
+************************************
+command line argument:
+
+char *p[]; pointer to buffer ( which is pointer to pointer)
+
+int main(int argc //<number of arguments>, char **argv //<argument>){
+    printf("number of args %d\n", argc);
+    
+    for(i=0; i<argc; i++){
+    	printf("%d: %s\n", i, argv[i] //<*argv+i>);
+    }
+
+}
+
+strtol
+atoi
+

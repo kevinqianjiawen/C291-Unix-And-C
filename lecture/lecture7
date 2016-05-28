@@ -1,0 +1,82 @@
+Pointer
+int foo[100];
+
+64-bit: memory 0xffff pointer is to hold the adress
+
+ 
+
+char 8
+short 16
+int 32
+long 32
+longlong 64
+float
+doubles
+
+void main(void){
+     int i = 3;
+     int *p = &i;  -- reference creation
+    // declaring poointer p pointing to an int
+    int j = *p; -- dereference operation;
+
+    int foo[100]= {0,1,2....,99};
+    p = &foo; 
+
+    printf("%d/n", *p);
+    p++;  -- p += size of (data tpe) * i; 
+    printf("%d/n", *p);
+
+    
+    char c = 'a';
+    char s[]= "test";
+
+    char *p;
+    p = &c;
+    printf("%c\n", *p); -> a
+    p = s;
+
+    printf("%s\n", *p); --%s print out string --> test
+***************************************************
+
+    int *ptr;
+    int k;
+    ptr = &k;
+    k = 3;
+    if(*ptr == k)--> true{
+    }
+    
+   *ptr = 4;
+   if(k==4){
+   }
+
+*****************************************************
+}
+
+int mstrlen(char *);
+
+int mystrlen(char *string-pointer){
+    int counter = 0;
+    while(*string-pointer != '\0'){
+    	counter ++;
+	string-pointer++;
+    }
+    return(counter);
+}
+
+char * mystrcpy(char *src, char *dst){
+     char *copy = dst;
+     while(*src != '\0'){
+     	*dst = *src;
+	dst++;
+	src++;
+     }
+     *dst = '\0';
+
+     return (copy);
+}
+
+man strcpy strlen
+
+libc
+
+include <sting.h>
