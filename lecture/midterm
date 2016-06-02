@@ -1,0 +1,40 @@
+10 question
+
+Data types: defining variables
+     int, float, char, double, long, longlong, short
+     pointer
+     ex: char * foo;
+
+loops: while, for
+functions: arguments, return value, variable scope
+
+arrays: int foo[100]
+	int * p;
+	p = foo;
+
+	int bar =5
+	p = &bar
+	printf("%d\n", *p);
+
+gcc -o myexecuable myprog.c
+
+command line: gcc, git
+
+char * first-occurance(char *str, char c){
+     while(*str != 0){
+     	if(*str == c){
+	  return (str);
+	}
+	str++;
+     }	
+     return (0);
+}
+
+void main(void){
+     char mystr[] = "hello";
+     char *p;
+     p = first-occurance(mystr, 'l');
+     printf("%s",p) -- print llo
+     printf("%c",*p) --print l
+
+}
