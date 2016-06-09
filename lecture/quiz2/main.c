@@ -9,9 +9,17 @@ struct node *listinsert(struct node *list, struct node *new){
     if(list->item > new->item && temp->item <= new->item){
       list->next = new;
       new->next = temp;
+      break;
     }
-    list = list->next;
-  }
+    
+    if(list->item <= new->item){
+      new -> next = list;
+      list = new;
+      break;
+    }
+    list = temp;
+ }
+
 }
 
 void listSum(struct node *p){
@@ -38,7 +46,8 @@ void main(void){
   struct node *current;
   struct node *head;
   head = NULL;
-  
+  struct node new ={.item=10, .next=NULL};
+
   for(i=1; i<5; i++){
     current = (struct node *) malloc(sizeof(struct node));
     current -> item = i*2;
@@ -50,20 +59,9 @@ void main(void){
   listSum(head);
   
   printList(head);
-
-
-    struct node *new;
-    new = (struct node *) malloc(sizeof(struct node));
-    new->item = 3;
-    new -> next = NULL;
-    listinsert(head, new);
-    
-    struct node *new2;
-    new2 = (struct node *) malloc(sizeof(struct node));
-    new2->item = 6;
-    new2 -> next = NULL;
-    listinsert(head, new2);
-      
-    printList(head);
+  
+  printf("Insert:\n");
+  head = listinsert(head, &new);
+  printList(head);
 }
 
