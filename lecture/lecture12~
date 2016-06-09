@@ -1,0 +1,9 @@
+struct name{
+       char lname[30];
+       char fname[30];
+       char phone_number[15];
+       char note[100];
+       struct name *next;
+};
+
+typedef struct name name_t;

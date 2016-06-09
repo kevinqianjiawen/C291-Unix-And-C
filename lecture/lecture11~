@@ -1,0 +1,68 @@
+structures
+pointers
+
+void * malloc(int site);
+     
+     free(void *);
+
+struct node {
+       int item;
+       struct node *next;
+}
+
+#include<stodi.h>
+#include<stdlib.h> -- standard library
+#include"node.h" --look local directory
+
+int i;
+struct node *current;
+struct node *head;
+head = null;
+
+for(i=1; i<5; i++){
+   current = (struct node *) malloc(sizeOf(struct node));
+   current -> item = i*2;
+   current -> next = head;
+   head = current;
+}
+
+listsum(head);
+
+int listsum(struct node *p){
+    int sum = 0;
+    while(p->next != null){
+    	sum += p-> item;
+	p = p->next;
+    }
+    sum += P->item;
+}
+
+void printlist (struct node *){
+     while(p){
+	printf("%d%p", p->item, p->next);
+	p = p->next;
+     }
+}
+
+struct node *listinsert(struct node *list, struct node *new){
+       while(p){
+	 if(list->item > new->item){
+	   list->next = new;
+	   new->next=
+	 }
+       }
+}
+
+||Makefile
+
+all: insert
+insert: main.c
+	gcc -g -o insert main.c
+clean:
+       rm -rf insert
+
+silo > ls
+     node.h main.c Makefile
+silo > make
+
+silo > make clean
