@@ -1,0 +1,73 @@
+struct name{
+       char lname[30];
+       char fname[30];
+       char phone_number[15];
+       char note[100];
+       struct name *next;
+};
+
+typedef struct name name_t;
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <errnd.h>
+#include <string.h>
+#include "name.h"
+int main(int argc ,char *argv[]){
+    file *infile;
+    name_t *imported_list;
+    if(argc!=3){
+	<exit fail>
+    }
+    infile = fopen(argv[1],"r");
+
+    <error checking>
+    if(import_list = imported_name_list(infile)){
+
+    }
+}
+
+name.c
+two struct namely personal details and class record
+name_t * imported_name_list(file *fp){
+       	 char line[100];
+	 char *field;
+	 name_t *current;
+	 name_t *last = null;
+	 name_t *first = null;
+	 while(1){
+	item_returned = fscanf(fp, "%s", line);
+	if(item_returned == EOF <end of file>){
+	  break;
+	}esle{
+	  current = (name_t *) malloc(sizeof(name_t));
+	  current->next = null;
+	  field = strtok(line, ",");
+	  strcpy(current->lname, field);
+	}
+	if(last){
+	  last->next = current;
+	  last = current;
+	}else{
+	  first = current;
+	  last = current;
+	}
+       }
+}
+
+silo>./importexport infile outfile
+        argv[0]     argv[1] argv[2]
+
+Makefile
+
+all: importexport
+
+importexport: main.c name.c
+	 gcc -g -o importexport main.c name.c
+
+clean:
+	rm -rf importexport
+
+test: 
+      ./importexport phone_list-in.csv phonelistout.csv
+      diff phone_list_in.csv phonelistout.csv
