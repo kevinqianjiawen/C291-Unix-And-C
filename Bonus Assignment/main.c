@@ -19,7 +19,6 @@ void main(void){
       printf("Enter an element to push\n");
       scanf("%d", &element);
       header = push(header, element);
-      display(header);
       break;
     case 2:
       header = pop(header);

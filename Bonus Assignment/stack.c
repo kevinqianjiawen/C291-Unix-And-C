@@ -15,7 +15,6 @@ struct stack * push(stack_t *list, int num){
   new->next = list;
   list = new;
   return (list);
-  
 }
 
 
@@ -24,7 +23,7 @@ void peek(stack_t *list){
   int num;
   if(list){
     num = list->number;
-    printf("Removed element %d\n", num);
+    printf("The top element is %d\n", num);
   }else{
   printf("The stack is empty\n");
 }
