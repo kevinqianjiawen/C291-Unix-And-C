@@ -7,6 +7,7 @@ void display(stack_t *list){
     list= list->next;
   }
 }
+  //push the number
 struct stack * push(stack_t *list, int num){
   stack_t *new;
   new = (stack_t *) malloc(sizeof(stack_t));
@@ -28,7 +29,7 @@ void peek(stack_t *list){
   printf("The stack is empty\n");
 }
 }
-
+//pop the top element
 struct stack * pop(stack_t *list){
   int num;
     if(list){
@@ -39,5 +40,5 @@ struct stack * pop(stack_t *list){
   }else{
   printf("The stack is empty\n");
   return NULL;
-}
+    }
 }
