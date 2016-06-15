@@ -1,0 +1,17 @@
+compiler
+	"gcc-Wall":enables the display of all optional warnings.
+
+static code analysis
+       splint: displays potential problems with c language usage.
+       	       Null pointers
+	       Variable usage before assignment
+	       type issues
+	       memory management
+
+interactiv
+	Gdb: Debugger which enables programmer to insert breakpoints, step code, and inspect memory.
+
+Run Time analysis
+    Gprof - Tool used to determine how much time your program spends in each function.
+
+    Valgrind - Used at runtime to detect memory management issues.

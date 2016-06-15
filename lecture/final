@@ -1,0 +1,60 @@
+final topic
+
+structures
+
+static  memory vs dynamic memory alloc
+
+typedef
+
+compiler direvtives
+	 #include<stdio.h>
+
+command line arguments
+
+Files - fopen
+      - fclose
+      - fscanf
+Makefiles
+
+debugging
+	gdb
+	set a breakpoint
+	run the code
+	read variables memory
+	write memory
+	step code
+
+Midterm topic
+
+data types defineing variable
+     variable scope
+
+loops for while
+
+conditional if
+
+functions
+	Arguments
+	prototypes
+
+arrays
+strings
+pointers
+build process
+      gcc invocation
+
+struct node mynodes[100];
+struct node *p;
+p = &mynodes;
+p = p+5;
+p->item = 10;
+
+//free memory
+free();
+
+FILE *fp;
+fp = fopen("path to file", "w")'
+   fscanf(fp, "  ", var);
+   fprintf(fp, " ", arguments)
+
+   fclose(fp);
