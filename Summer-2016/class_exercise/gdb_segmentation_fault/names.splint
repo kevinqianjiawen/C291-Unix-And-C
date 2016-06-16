@@ -1,0 +1,23 @@
+Splint 3.1.2 --- 11 Oct 2015
+
+names.c: (in function import_name_list)
+names.c:19:10: Test expression for while not boolean, type int: 1
+  Test expression type is not boolean or int. (Use -predboolint to inhibit
+  warning)
+names.c:26:14: Arrow access from possibly null pointer current: current->next
+  A possibly null pointer is dereferenced.  Value is either the result of a
+  function which may return null (in which case, code should check it is not
+  null), or a global, parameter or structure field declared with the null
+  qualifier. (Use -nullderef to inhibit warning)
+   names.c:25:17: Storage current may become null
+names.c:40:2: Implicitly only storage last->next (type struct name *) not
+                 released before assignment: last->next = current
+  A memory leak has been detected. Only-qualified storage is not released
+  before the last reference to it is lost. (Use -mustfreeonly to inhibit
+  warning)
+names.c:50:11: Null storage returned as non-null: (NULL)
+  Function returns a possibly null pointer, but is not declared using
+  /*@null@*/ annotation of result.  If function may return NULL, add /*@null@*/
+  annotation to the return value declaration. (Use -nullret to inhibit warning)
+
+Finished checking --- 4 code warnings

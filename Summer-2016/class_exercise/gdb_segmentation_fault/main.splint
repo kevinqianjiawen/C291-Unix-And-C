@@ -1,0 +1,12 @@
+Splint 3.1.2 --- 11 Oct 2015
+
+main.c: (in function main)
+main.c:23:17: Unrecognized identifier: ENOENT
+  Identifier used in code has not been declared. (Use -unrecog to inhibit
+  warning)
+main.c:39:2: Return value (type int) ignored: fclose(outfile)
+  Result returned by function call is not used. If this is intended, can cast
+  result to (void) to eliminate message. (Use -retvalint to inhibit warning)
+main.c:48:7: Return value (type int) ignored: fclose(infile)
+
+Finished checking --- 3 code warnings
